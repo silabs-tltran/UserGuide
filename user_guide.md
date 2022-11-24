@@ -10,11 +10,12 @@ GSDK ver 4.1.1 and higher
 
 ##  Hardware Required
 
-• [NUCLEO-F411RE board](https://www.st.com/en/evaluation-tools/nucleo-f411re.html )
-• [EFR32MG12 Starter Kit](https://www.st.com/en/evaluation-tools/nucleo-f411re.html )
+• [NUCLEO-F411RE board](https://www.st.com/en/evaluation-tools/nucleo-f411re.html)
+
+• [EFR32MG12 Starter Kit](https://www.silabs.com/development-tools/wireless/zigbee/efr32mg12-dual-band-starter-kit?tab=overview)
 
 ##  Connections Required
-![](c.png )
+![](connection.png )
 
 Connect these pins:
 
@@ -231,3 +232,11 @@ As mentioned above, at the time this user guide is written, we only support STM3
 1. Import the project
 * Open STM32CubeIDE, select ***File/Import***. In ***Import tab***, select ***C/C++*** and ***Existing Code as Makefile Project***. Then select Next
 * Browse ***Z3 Light Mcu*** location. Select ***MCU ARM GCC*** as a toolchain for indexer settings. Then finish importing.
+![](8.png)
+
+2. Build project
+* Right click on ***Z3LightMcu*** on ***Project Explorer*** tab. Select ***Build Targets/Create***
+![](9.png)
+* Create target name ***build***, untick ***Use builder settings*** then add build command ```make -f Z3LightMcu.Makefile -j6```
+![](10.png)
+* At that time, ***Build Targets*** icon will be added to project. Right click on it, select ***Build*** then select target ***all***, the project will be compiled
